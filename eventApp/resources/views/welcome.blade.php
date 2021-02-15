@@ -23,7 +23,7 @@
         @else
         <a href="{{ route('login') }}" class="btn btn-outline-success" data-toggle="tooltip" data-placement="right">Login</a>
         @if (Route::has('register'))
-        <a href="{{ route('register') }}" class="btn btn-outline-success" data-placement="right">Register</a>
+        <a href="{{ route('register') }}" class="btn btn-outline-success" data-placement="right">Cadastro</a>
         @endif
         @endauth
 
@@ -31,8 +31,16 @@
     </div>
 </div>
 
-
 <div class="container">
+    <h1>Bem Vindo</h1>
+    <p>Esse é um site de publicação de eventos se você procura por um evento clique no botão abaixo se você está publicando um evento faça o login ou faça o cadastro.</p>
+
+    <input type="button" value="Ver Eventos" class="btn btn-outline-success"/>
+</div>
+
+<div class="alert alert-dismissible alert-warning">
+  <h4 class="alert-heading">Ateção!</h4>
+  <p class="mb-0">Que bom que você chegou até aqui mas esse site não é oficial, ele é apenas um teste de um jovem de 19 anos apaixonado em programação :) para contato meu github: <a href="https://github.com/GabrielT31xeira" class="alert-link">Gabriel Teixeira</a> ou email: gt3ixeira@gmail.com para o repositorio desse projeto <a href="https://github.com/GabrielT31xeira/eventApp" class="alert-link">clique aqui</a></p>
 </div>
 
 </html>

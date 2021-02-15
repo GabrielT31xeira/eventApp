@@ -7,12 +7,12 @@
 
     <link rel="stylesheet" href="https://bootswatch.com/4/sandstone/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/scripts.js"></script>
+
 
     <title>@yield('title')</title>
 </head>
 <body>
     @yield('content')
-    <footer><p>Test Events &copy; 2021</p></footer>
+    <footer><p class="footer">Test Events &copy; 2021</p></footer>
 </body>
 </html>
