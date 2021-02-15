@@ -1,5 +1,7 @@
 .navbar {
-    height: 45px;
+    height: 47px;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0 0 1em black;
 }
 .logs-position {
     position: absolute;
@@ -16,7 +18,7 @@
     text-align: center;
     bottom: 0;
     left: 0;
-    height: 40px;
+    height: 10px;
     position: fixed;
     width: 100%;
 }

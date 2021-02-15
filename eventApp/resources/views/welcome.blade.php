@@ -40,7 +40,7 @@
 
 <div class="alert alert-dismissible alert-warning">
   <h4 class="alert-heading">Ateção!</h4>
-  <p class="mb-0">Que bom que você chegou até aqui mas esse site não é oficial, ele é apenas um teste de um jovem de 19 anos apaixonado em programação :) para contato meu github: <a href="https://github.com/GabrielT31xeira" class="alert-link">Gabriel Teixeira</a> ou email: gt3ixeira@gmail.com para o repositorio desse projeto <a href="https://github.com/GabrielT31xeira/eventApp" class="alert-link">clique aqui</a></p>
+  <p class="mb-0">Que bom que você chegou até aqui mas esse site não é oficial, ele é apenas um teste de um jovem de 19 anos apaixonado em programação :) para contato meu github: <a href="https://github.com/GabrielT31xeira" class="alert-link">Gabriel Teixeira</a> ou email: gt3ixeira@gmail.com para o repositorio desse projeto <a href="https://github.com/GabrielT31xeira/eventApp" class="alert-link">clique aqui</a>.</p>
 </div>
 
 </html>
