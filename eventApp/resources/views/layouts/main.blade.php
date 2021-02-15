@@ -13,6 +13,6 @@
 </head>
 <body>
     @yield('content')
-    <footer><p class="footer">Test Events &copy; 2021</p></footer>
+    <footer><p class="footer">HDC Events &copy; 2021</p></footer>
 </body>
 </html>

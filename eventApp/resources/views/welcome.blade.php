@@ -36,7 +36,7 @@
     <h1>Bem Vindo</h1>
     <p>Esse é um site de publicação de eventos se você procura por um evento clique no botão abaixo se você está publicando um evento faça o login ou faça o cadastro.</p>
 
-    <input type="button" value="Ver Eventos" class="btn btn-outline-success"/>
+    <a href="{{ url('/eventos') }}" class="btn btn-outline-success">Ver Eventos</a>
 </div>
 
 <div class="alert alert-dismissible alert-warning">
