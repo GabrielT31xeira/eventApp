@@ -1,3 +1,10 @@
-h1{
-    color: red;
+.navbar {
+    height: 45px;
+}
+.logs-position {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 5px;
+    margin-right: 5px;
 }
