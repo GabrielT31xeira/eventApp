@@ -17,9 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/film', function () {
-    return view('film');
+Route::get('/eventos', function () {
+    return view('eventos');
 });
+
+Route::get('/eventos/{id}', function ($id) {
+    return view('eventos',['id' => $id]);
+});
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');

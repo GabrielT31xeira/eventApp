@@ -16,6 +16,7 @@
     <title>@yield('title')</title>
 </head>
 <div class="navbar navbar-expand-lg navbar-dark bg-primary">
+<p class="navbar-brand">HDC Events</p>
     <div class="logs-position">
         @if (Route::has('login'))
         @auth
