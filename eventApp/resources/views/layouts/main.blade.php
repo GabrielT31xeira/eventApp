@@ -35,7 +35,7 @@
         <img src="/img/fundo.png" alt="HDC Events" class="imgFundo" title="Ola">
 
     </header>
-    @yield('content')
+    @yield('contentWelcome')
     <footer>
         <p class="footer">HDC Events &copy; 2021</p>
     </footer>

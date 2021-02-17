@@ -2,7 +2,7 @@
 
 @section('title','HDC Events')
 
-@section('content')
+@section('contentWelcome')
 <!DOCTYPE html>
 <html lang="en">
 

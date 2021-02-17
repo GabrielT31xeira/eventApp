@@ -17,14 +17,10 @@ use App\Http\Controllers\EventController;
 
 Route::get('/', [EventController::class, 'index']);
 
-Route::get('/user', function () {
+Route::get('/eventos', function () {
     return view('vereventos');
 });
 
-
-Route::get('/eventos', function () {
-    return view('eventos');
-});
 
 Route::get('/eventos/{id}', function ($id) {
     return view('eventos',['id' => $id]);
