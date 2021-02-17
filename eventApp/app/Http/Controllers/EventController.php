@@ -13,7 +13,20 @@ class EventController extends Controller
      */
     public function index()
     {
-        return view('welcome');
+
+        $nome = "Matheus";
+        $idade = 29;
+
+        $arr = [10,20,30,40];
+
+        $nomes = ["Gabriel","Heitor","Rafaels"];
+
+        return view('welcome',[
+            'nome' => $nome,
+            'idade' => $idade,
+            'arr' => $arr,
+            'nome' => $nome
+        ]);
     }
 
     /**
