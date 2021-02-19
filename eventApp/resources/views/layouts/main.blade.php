@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -32,7 +32,7 @@
             </div>
         </div>
 
-        <img src="/img/fundo.png" alt="HDC Events" class="imgFundo" title="Ola">
+        <!-- <img src="/img/fundo.png" alt="HDC Events" class="imgFundo" title="Ola"> -->
 
     </header>
     @yield('contentWelcome')
