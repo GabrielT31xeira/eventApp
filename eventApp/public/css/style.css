@@ -2,10 +2,13 @@
     height: 50px;
     box-shadow: 0 0 1em black;
 }
-.navbar-brand{
-    margin-top: 10px;
+
+.navbar-brand {
+    margin-left: 6px;
+    margin-top: 13px;
     font-size: 20px;
 }
+
 .logs-position {
     position: absolute;
     top: 0;
@@ -13,21 +16,30 @@
     margin-top: 7px;
     margin-right: 5px;
 }
+
 .container {
     margin-top: 70px;
     text-align: center;
 }
+
 .footer {
     text-align: center;
+    width: 100%;
+    height: 40px;
+    position: absolute;
     bottom: 0;
     left: 0;
-    height: 10px;
-    width: 100%;
 }
+
 div.alert {
     text-align: center;
     margin: 40px;
 }
+
 .imgFundo {
     width: 100%;
+}
+
+.mars {
+    width: 3%;
 }

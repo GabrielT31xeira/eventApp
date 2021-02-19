@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://bootswatch.com/4/sandstone/bootstrap.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
 
 
@@ -15,22 +15,24 @@
 
 <body>
     <header>
-        <div class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="navbar navbar-expand-lg navbar-light bg-primary">
+            <img src="/img/mars_planet_space_icon_176329.png" class="mars" title="hello">
             <p class="navbar-brand">HDC Events</p>
             <div class="logs-position">
                 @if (Route::has('login'))
                 @auth
-                <a href="{{ url('/dashboard') }}" class="btn btn-outline-success" data-placement="right">Dashboard</a>
+                <a href="{{ url('/dashboard') }}" class="btn btn-success" data-placement="right">Dashboard</a>
                 @else
-                <a href="{{ route('login') }}" class="btn btn-outline-success" data-toggle="tooltip" data-placement="right">Login</a>
+                <a href="{{ route('login') }}" class="btn btn-success" data-toggle="tooltip" data-placement="right">Login</a>
                 @if (Route::has('register'))
-                <a href="{{ route('register') }}" class="btn btn-outline-success" data-placement="right">Cadastro</a>
+                <a href="{{ route('register') }}" class="btn btn-success" data-placement="right">Cadastro</a>
                 @endif
                 @endauth
 
                 @endif
             </div>
         </div>
+
 
         <!-- <img src="/img/fundo.png" alt="HDC Events" class="imgFundo" title="Ola"> -->
 
