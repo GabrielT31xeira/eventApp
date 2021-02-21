@@ -15,11 +15,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
 
 
-Route::get('/', [EventController::class, 'index']);
-
-Route::get('/eventos', function () {
-    return view('vereventos');
+Route::get('/', function (){
+    return view('welcome');
 });
+
+Route::get('/eventos', [EventController::class ,'index']);
 
 
 Route::get('/eventos/{id}', function ($id) {
