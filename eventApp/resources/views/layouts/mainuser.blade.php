@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/vereventos/index.css">
 
     <title>@yield('title')</title>
 </head>
@@ -24,9 +24,7 @@
     @yield('content')
 
     <footer class="footer">
-        <div class="navbar navbar-expand-lg navbar-light bg-primary">
-            <p class="footer">HDC Events &copy; 2021</p>
-        </div>
+        <p>HDC Events &copy; 2021</p>
     </footer>
 
 </body>

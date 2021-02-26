@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/welcome/index.css">
 
 
     <title>@yield('title')</title>
@@ -32,14 +32,24 @@
                 @endif
             </div>
         </div>
-
-
         <!-- <img src="/img/fundo.png" alt="HDC Events" class="imgFundo" title="Ola"> -->
-
     </header>
-    @yield('contentWelcome')
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                @if(session('msg'))
+                <p class="msg">{{ session('msg') }}</p>
+                @endif
+                @yield('contentWelcome')
+            </div>
+        </div>
+    </main>
     <footer>
-        <p class="footer">HDC Events &copy; 2021</p>
+        <div class="footer">
+            <div>
+                <p>HDC Events &copy; 2021</p>
+            </div>
+        </div>
     </footer>
 </body>
 

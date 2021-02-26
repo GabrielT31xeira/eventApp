@@ -15,8 +15,18 @@
     font-size: 20px;
 }
 
+.msg {
+    background-color: #D4EDDA;
+    color: #155724;
+    border: 1px solid #C3E6CB;
+    width: 100%;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 10px;
+}
+
 .main {
-    min-height: calc(100vh - 50px - 120px);
+    min-height: calc(100vh - 50px - 50px);
 }
 
 .logs-position {
@@ -37,40 +47,13 @@ div.alert {
     margin: 40px;
 }
 
-.margin {
-    padding-top: 20px;
-}
-
-
-/* .imgFundo {
-    width: 100%;
-} */
-
 .mars {
     width: 3%;
 }
 
-.center {
-    padding-top: 20px;
+.footer {
+    background-color: #4582ec;
     text-align: center;
-}
-
-.card-box {
-    padding-left: 120px;
-}
-
-#card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 250px;
-    width: 250px;
-    padding: 20px;
-    margin-left: 10px;
-    display: inline-block;
-}
-
-footer {
-    text-align: center;
-    /* padding: 20px; */
+    height: 50px;
+    box-shadow: 0 0 1em black;
 }
