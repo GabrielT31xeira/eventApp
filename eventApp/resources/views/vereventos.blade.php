@@ -31,6 +31,7 @@
         @foreach($events as $event)
         <div class="card border-primary mb-3" id="card">
             <div class="card-body">
+            <img src="img/events/{{ $event->image }}" alt="{{ $event->title }}" class="event-image">
                 <p class="card-date">
                     10/09/2021</p>
                 <h5 class="card-title">{{ $event->title }}</h5>

@@ -47,11 +47,24 @@ class EventController extends Controller
         $event->description = $request->description;
         $event->remote = $request->remote;
 
+        
+        //img upload
+        
+        if($request->hasFile('image') && $request->file('image')->isValid()){
+            
+            $requestIMG = $request->image; 
+            $extension = $requestIMG->extension();
+            $imageName = md5($requestIMG->getClientOriginalName() . strtotime("now")) . "." . $extension;
+            $requestIMG->move(public_path('img/events'), $imageName);
+            
+            $event->image = $imageName;
+        }
+
         $event->save();
 
         return redirect('/')->with('msg','Evento criado com sucesso');
     }
-
+ 
     /**
      * Display the specified resource.
      *
