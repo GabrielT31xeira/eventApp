@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
     <link rel="stylesheet" href="/css/vereventos/index.css">
 
