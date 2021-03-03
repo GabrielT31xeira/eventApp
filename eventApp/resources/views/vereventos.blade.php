@@ -33,7 +33,7 @@
             <div class="card-body">
             <img src="img/events/{{ $event->image }}" alt="{{ $event->title }}" class="event-image">
                 <p class="card-date">
-                    10/09/2021</p>
+                    {{ date('d/m/Y',strtotime($event->date)) }}</p>
                 <h5 class="card-title">{{ $event->title }}</h5>
                 <p class="card-participants">X participantes</p>
                 <a href="/eventos/{{ $event->id }}" class="btn btn-outline-success">Saber Mais</a>

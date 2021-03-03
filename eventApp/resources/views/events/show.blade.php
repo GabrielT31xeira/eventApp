@@ -11,13 +11,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 
     <style>
-    #card-view {
-        padding: 77.1px;
-    }
+        #card-view {
+            padding: 50px;
+        }
     </style>
 
 </head>
@@ -34,16 +34,25 @@
                 <p class="event-city">
                     <ion-icon name="location-outline"></ion-icon> {{ $event->city }}
                 </p>
+                <p class="event-date">
+                    <ion-icon name="calendar-outline"></ion-icon> {{ date('d/m/Y',strtotime($event->date)) }}
+                </p>
                 <p class="event-participantes">
                     <ion-icon name="people-outline"></ion-icon> X Participantes
                 </p>
                 <p class="event-owner">
                     <ion-icon name="star-outline"></ion-icon> Dono do Evento
                 </p>
+                <h3>O Evento Conta Com:</h3>
+                <ul id="items-list" style="list-style: none; padding-left: 0;">
+                    @foreach ($event->items as $item)
+                    <li><ion-icon name="play-outline"></ion-icon>{{ $item }}</li>
+                    @endforeach
+                </ul>
                 <a href="#" class="btn btn-primary" id="event-submit">Comfirmar Presença</a>
             </div>
             <div class="col-md-12" id="description-container">
-                <h3>Sobre o Evento:</h3>
+                <h4>Sobre o Evento:</h4>
                 <p class="event-description">{{$event->description}}</p>
             </div>
         </div>

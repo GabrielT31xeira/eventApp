@@ -16,6 +16,10 @@
         <input type="text" class="form-control" 
         id="title" name="title" placeholder="Nome do Evento" />
 
+        <label for="date">Data do Evento: </label>
+        <input type="date" class="form-control" 
+        id="date" name="date" />
+
         <label for="city">Cidade: </label>
         <input type="text" class="form-control" 
         id="city" name="city" placeholder="Cidade do Evento" />
@@ -44,10 +48,7 @@
         </div>  
         <div class="form-group">
             <input type="checkbox" name="items[]" value="OpenBar"> Open Bar 
-        </div>  
-        <div class="form-group">
-            <input type="checkbox" name="items[]" value="Palco"> Palco 
-        </div>  
+        </div>   
 
         <input type="submit" class="btn btn-primary"value="Criar Evento" />
     </form>
