@@ -19,7 +19,7 @@ Route::get('/', function (){
     return view('welcome');
 });
 Route::get('/eventos', [EventController::class ,'index']);
-Route::get('/eventos/criar', [EventController::class ,'create']);
+Route::get('/eventos/criar', [EventController::class ,'create'])->middleware('auth');
 Route::get('/eventos/{id}', [EventController::class ,'show']);
 Route::post('/eventos', [EventController::class ,'store']);
 
