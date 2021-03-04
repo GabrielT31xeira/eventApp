@@ -41,7 +41,7 @@
                     <ion-icon name="people-outline"></ion-icon> X Participantes
                 </p>
                 <p class="event-owner">
-                    <ion-icon name="star-outline"></ion-icon> Dono do Evento
+                    <ion-icon name="star-outline"></ion-icon> {{ $eventOwner['name'] }}
                 </p>
                 <h3>O Evento Conta Com:</h3>
                 <ul id="items-list" style="list-style: none; padding-left: 0;">
