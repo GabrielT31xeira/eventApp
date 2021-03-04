@@ -17,16 +17,22 @@
     <div class="margin">
         <div id="search-container" class="col-md-12">
             <h1>Busque um Evento</h1>
-            <form action="">
+            <form action="/eventos" method="GET">
                 <input type="text" name="search" id="search" class="form-control" placeholder="Pesquisar...">
             </form>
         </div>
     </div>
+    @if (!$search)
     <div class="center">
         <h2>Proximos Eventos</h2>
         <p>Veja os eventos dos proximos eventos</p>
     </div>
-
+    @else
+    <div class="center">
+        <h2>Buscando Por: {{ $search }}</h2>
+        <p>Veja os eventos da sua busca</p>
+    </div>
+    @endif
     <div class="card-box">
         @foreach($events as $event)
         <div class="card border-primary mb-3" id="card">
@@ -40,6 +46,12 @@
             </div>
         </div>
         @endforeach
+
+        @if(count($events) == 0 && $search)
+        <p>Não foi possivel encontrar o evento. <a href="/eventos">ver todos</a></p>
+        @elseif(count($events) == 0)
+        <p>Não há eventos disponiveis</p>
+        @endif
     </div>
 </body>
 
