@@ -23,5 +23,5 @@ Route::get('/eventos/criar', [EventController::class ,'create'])->middleware('au
 Route::get('/eventos/{id}', [EventController::class ,'show']);
 Route::post('/eventos', [EventController::class ,'store']);
 Route::get('/dashboard',[EventController::class, 'dashboard'])->middleware('auth');
-
+Route::delete('/eventos/{id}', [EventController::class,'destroy'])->middleware('auth');
 

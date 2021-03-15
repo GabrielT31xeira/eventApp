@@ -5,7 +5,10 @@
 @section('content')
 
 <div class="col-md-10 offset-md-1 dashboard-title-container">
-    <h1>Meus Eventos</h1>
+    @if(session('msg'))
+        <p class="msg">{{ session('msg') }}</p>
+    @endif
+        <h1>Meus Eventos</h1>
 </div>
 <div class="col-md-10 offset-md-1 dashboard-events-container">
     @if (count($events) > 0)
@@ -24,7 +27,13 @@
                 <td scope="row">{{ $loop->index + 1 }}</th>
                 <td><a href="/eventos/{{ $event->id}}">{{ $event->title }}</a></td>
                 <td>0</td>
-                <td><a href="#" class="btn btn-warning" style="margin-right: 2.5px;">Editar</a><a href="#" class="btn btn-danger">Deletar</a></td>
+                <td><a href="#" class="btn btn-warning" style="margin-right: 2.5px;">Editar</a>
+                    <form action="/eventos/{{ $event->id }}" method="post" style="display: inline-block;">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">Deletar</button>
+                    </form>
+                </td>
             </tr>
             @endforeach
         </tbody>
