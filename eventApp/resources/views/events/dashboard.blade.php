@@ -24,7 +24,7 @@
                 <td scope="row">{{ $loop->index + 1 }}</th>
                 <td><a href="/eventos/{{ $event->id}}">{{ $event->title }}</a></td>
                 <td>0</td>
-                <td><a href="#">Editar</a><a href="#">Deletar</a></td>
+                <td><a href="#" class="btn btn-warning" style="margin-right: 2.5px;">Editar</a><a href="#" class="btn btn-danger">Deletar</a></td>
             </tr>
             @endforeach
         </tbody>
