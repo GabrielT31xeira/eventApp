@@ -20,7 +20,6 @@ class EventController extends Controller
         $search = request('search');
 
         if($search){
-
             $events = Event::where([
                 ['title','like','%'.$search.'%'],
             ])->get();

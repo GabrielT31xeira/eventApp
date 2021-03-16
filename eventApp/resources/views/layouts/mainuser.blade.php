@@ -16,7 +16,7 @@
 <body>
     <div class="navbar navbar-expand-lg navbar-light bg-primary">
         <img src="/img/mars_planet_space_icon_176329.png" class="mars" title="hello">
-        <p class="navbar-brand">HDC Events</p>
+        <a href="/" class="navbar-brand">HDC Events</a>
     </div>
     <header>
 

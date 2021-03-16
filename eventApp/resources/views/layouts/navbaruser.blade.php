@@ -19,7 +19,7 @@
 
 <body>
     <div class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <p class="navbar-brand">HDC Events</p>
+        <a href="/" class="navbar-brand" style="margin-top: 5px;">HDC Events</a>
     </div>
 </body>
 
