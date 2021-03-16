@@ -105,7 +105,11 @@ class EventController extends Controller
      */
     public function edit($id)
     {
-        //
+        
+        $event = Event::findOrFail($id);
+
+        return view('events.edit', ['event' => $event]);
+
     }
 
     /**
@@ -115,9 +119,24 @@ class EventController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $data = $request->all();
+
+        if($request->hasFile('image') && $request->file('image')->isValid()){
+            
+            $requestIMG = $request->image; 
+            $extension = $requestIMG->extension();
+            $imageName = md5($requestIMG->getClientOriginalName() . strtotime("now")) . "." . $extension;
+            $requestIMG->move(public_path('img/events'), $imageName);
+            
+            $data['image'] = $imageName;
+        }
+
+        Event::findOrFail($request->id)->update($data);
+
+        return redirect('/dashboard')->with('msg', 'Evento editado com sucesso.');
+
     }
 
     /**
