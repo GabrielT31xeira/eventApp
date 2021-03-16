@@ -15,9 +15,9 @@
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 
     <style>
-        #card-view {
-            padding: 50px;
-        }
+    #card-view {
+        padding: 50px;
+    }
     </style>
 
 </head>
@@ -46,10 +46,19 @@
                 <h3>O Evento Conta Com:</h3>
                 <ul id="items-list" style="list-style: none; padding-left: 0;">
                     @foreach ($event->items as $item)
-                    <li><ion-icon name="play-outline"></ion-icon>{{ $item }}</li>
+                    <li>
+                        <ion-icon name="play-outline"></ion-icon>{{ $item }}
+                    </li>
                     @endforeach
                 </ul>
-                <a href="#" class="btn btn-primary" id="event-submit">Comfirmar Presença</a>
+                <form action="/eventos/join/{{ $event->id }}" method="POST">
+                    @csrf
+                    <a href="/eventos/join/{{ $event->id }}" 
+                    class="btn btn-primary" id="event-submit"
+                    onclick="event.preventDefault();
+                    this.closest('form').submit();">
+                    Comfirmar Presença</a>
+                </form>
             </div>
             <div class="col-md-12" id="description-container">
                 <h4>Sobre o Evento:</h4>
