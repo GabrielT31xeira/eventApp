@@ -58,6 +58,8 @@
                     this.closest('form').submit();">
                         Comfirmar Presença</a>
                 </form>
+                @elseif(!$user)
+                    <p>Faça o login para participar do evento.</p>
                 @else
                 <form action="/eventos/leave/{{ $event->id }}" method="POST">
                     @csrf
