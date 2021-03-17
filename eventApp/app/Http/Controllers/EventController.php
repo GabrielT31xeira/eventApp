@@ -179,10 +179,22 @@ class EventController extends Controller
 
         $user = auth()->user();
 
+        $event = Event::findOrFail($id);
+        
         $user->eventsAsParticipantes()->attach($id);
 
-        $event = Event::findOrFail($id);
-
         return redirect('events.dashboard')->with('msg', 'Sua presença foi comfirmada ' . $event->title);
+    }
+
+    public function leaveEvent($id)
+    {
+        $user = auth()->user();
+
+        $event = Event::findOrFail($id);
+        
+        $user->eventsAsParticipantes()->detach($id);
+
+        return redirect('/dashboard')->with('msg', ' Você saiu do Evento ' . $event->title);
+
     }
 }

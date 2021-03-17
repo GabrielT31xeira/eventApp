@@ -54,14 +54,19 @@
                 @if(!$eventsAsParticipantes)
                 <form action="/eventos/join/{{ $event->id }}" method="POST">
                     @csrf
-                    <a href="/eventos/join/{{ $event->id }}" 
-                    class="btn btn-primary" id="event-submit"
-                    onclick="event.preventDefault();
+                    <a href="/eventos/join/{{ $event->id }}" class="btn btn-primary" id="event-submit" onclick="event.preventDefault();
                     this.closest('form').submit();">
-                    Comfirmar Presença</a>
+                        Comfirmar Presença</a>
                 </form>
                 @else
-                    <p>Você já participa desse evento <a href="#">Sair</a>.</p>
+                <form action="/eventos/leave/{{ $event->id }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger">
+                        <ion-icon name="trash-outline"></ion-icon>
+                        Sair do Evento
+                    </button>
+                </form>
                 @endif
             </div>
             <div class="col-md-12" id="description-container">
