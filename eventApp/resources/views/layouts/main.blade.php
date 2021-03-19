@@ -22,14 +22,18 @@
                 @if (Route::has('login'))
                 @auth
                 <a href="{{ url('/dashboard') }}" class="btn btn-success" data-placement="right">Dashboard</a>
-                @else
-                <a href="{{ route('login') }}" class="btn btn-success" data-toggle="tooltip" data-placement="right">Login</a>
-                @if (Route::has('register'))
-                <a href="{{ route('register') }}" class="btn btn-success" data-placement="right">Cadastro</a>
-                @endif
-                @endauth
+                <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <buttom type="submit" class="btn btn-success" data-placement="right">Sair</a>
+                        @else
+                        <a href="{{ route('login') }}" class="btn btn-success" data-toggle="tooltip"
+                            data-placement="right">Login</a>
+                        @if (Route::has('register'))
+                        <a href="{{ route('register') }}" class="btn btn-success" data-placement="right">Cadastro</a>
+                        @endif
+                        @endauth
 
-                @endif
+                        @endif
             </div>
         </div>
         <!-- <img src="/img/fundo.png" alt="HDC Events" class="imgFundo" title="Ola"> -->
